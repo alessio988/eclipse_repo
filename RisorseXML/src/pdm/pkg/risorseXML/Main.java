@@ -15,6 +15,8 @@ public class Main extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        String str = "quello che volete scrivere";
+	    Log.d("XML PARSER", str);
     }
     
     XmlResourceParser parser = getResources().getXml(R.xml.compilation);{
@@ -37,10 +39,5 @@ public class Main extends Activity {
     }catch (IOException e) {
     	e.printStackTrace();
     }
-    
-    String str = "quello che volete scrivere";
-    	    Log.d("XML PARSER", str);
-        
-    
     }
 }
