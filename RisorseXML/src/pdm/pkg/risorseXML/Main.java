@@ -16,8 +16,8 @@ public class Main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         String str = "quello che volete scrivere";
-	    Log.d("XML PARSER", str);
-    }
+	    Log.d("XML PARSER", parser.getName());
+	    }
     
     XmlResourceParser parser = getResources().getXml(R.xml.compilation);{
     
