@@ -14,4 +14,14 @@
             android:layout_marginTop="84dp"
             android:src="@drawable/lorry" />
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginRight="91dp"
+            android:layout_marginTop="129dp"
+            android:src="@drawable/van" />
+
     </RelativeLayout>
