@@ -1,0 +1,7 @@
+package pdm.pkg.server;
+
+public class ServerConfiguration {
+	public static final String AUTHENTICATION_TOKEN = "DQAAALQAAACTmj3v42jqLUrpoHNpRckVvITSmrBYhzR2f-Fyee6P1zqPm1b_fmGxb0rr1WlZf4Z8Mr8NiCqYDkaD8_mXrZwqfuEs6BDwhX8E8IeMr-hjUZywf8C3_B27w7f9K5ujCCbv7QIWW9LtcDl3wRppob6ATqBX81BuRmik6pNnFAM4XA55E8zHViveZzXq4xk6-RU7p_FXU-kp00SDEP0QiffUKV2WsaodlPzKfdndK62tgGRCXvnxn9SndbdQpLSWneo";
+	public static final String REGISTRATION_ID = "gabriellapuccio62@gmail.com";
+
+}

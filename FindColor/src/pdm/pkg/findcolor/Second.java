@@ -35,6 +35,8 @@ public class Second extends Activity {
 	    color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
 	    Toast.makeText(getApplicationContext(), color , Toast.LENGTH_LONG).show();
 	    
+	    //Invio del colore allo sfidante
+	    
 	    //Immagine della fotocamera
 		preview = new Preview(this);
 		((FrameLayout) findViewById(R.id.preview)).addView(preview);

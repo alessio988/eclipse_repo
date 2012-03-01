@@ -1,6 +1,7 @@
 package pdm.pkg.chat;
 
-import org.jivesoftware.smack.Connection;
+import java.sql.Connection;
+
 import org.jivesoftware.smack.ConnectionConfiguration;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.XMPPConnection;
@@ -29,10 +30,9 @@ public class ChatActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        //Variabili
+        //Variabili inizializzazioni
         final EditText edt = (EditText) findViewById(R.id.editText1);
-        final TextView tv = (TextView) findViewById(R.id.textView1);
-       
+        final TextView tv = (TextView) findViewById(R.id.textView1);      
         Button btn = (Button) findViewById(R.id.button1);
         
         //Scrolling
@@ -45,21 +45,21 @@ public class ChatActivity extends Activity {
         		Message msg = new Message();
         		msg.setTo("loreti@ppl.eln.uniroma2.it");
         		msg.setBody(edt.getText().toString());
-        		connection.sendPacket(msg);
+        		((XMPPConnection) connection).sendPacket(msg);
         	}
         });
         
         try{
         	ConnectionConfiguration config = new ConnectionConfiguration("ppl.eln.uniroma2.it",5222);
         	config.setSecurityMode(ConnectionConfiguration.SecurityMode.disabled);
-        	connection = new XMPPConnection(config);
-        	connection.connect();
-        	connection.login("marangon","marangon");
+        	connection = (Connection) new XMPPConnection(config);
+        	((XMPPConnection) connection).connect();
+        	((org.jivesoftware.smack.Connection) connection).login("marangon","marangon");
         }catch (XMPPException e) {
         	e.printStackTrace();
         }
         
-        connection.addPacketListener(new PacketListener() {
+        ((org.jivesoftware.smack.Connection) connection).addPacketListener(new PacketListener() {
 			
 			@Override
 			public void processPacket(Packet pkt) {
